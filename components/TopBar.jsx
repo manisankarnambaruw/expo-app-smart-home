@@ -15,7 +15,7 @@ import Animated, {
 } from "react-native-reanimated";
 
 export default function TopBar(props) {
-  const leftValue = useSharedValue(15);
+  const leftValue = useSharedValue(12);
   const [activeItem, setActiveItem] = useState("LR");
 
   const config = {
@@ -54,14 +54,14 @@ export default function TopBar(props) {
         <TouchableOpacity
           onPress={() => {
             setActiveItem("LR");
-            leftValue.value = 15;
+            leftValue.value = 12;
           }}
         >
           <Text
             style={[
               { ...topBarStyles.textStyles },
               activeItem === "LR"
-                ? { fontWeight: "bold" }
+                ? { fontFamily: "Poppins-Bold" }
                 : { color: "#7d7d7d" },
             ]}
           >
@@ -72,14 +72,14 @@ export default function TopBar(props) {
         <TouchableOpacity
           onPress={() => {
             setActiveItem("D");
-            leftValue.value = 128;
+            leftValue.value = 126;
           }}
         >
           <Text
             style={[
               topBarStyles.textStyles,
               activeItem === "D"
-                ? { fontWeight: "bold" }
+                ? { fontFamily: "Poppins-Bold" }
                 : { color: "#7d7d7d" },
             ]}
           >
@@ -89,14 +89,14 @@ export default function TopBar(props) {
         <TouchableOpacity
           onPress={() => {
             setActiveItem("K");
-            leftValue.value = 200;
+            leftValue.value = 194;
           }}
         >
           <Text
             style={[
               topBarStyles.textStyles,
               activeItem === "K"
-                ? { fontWeight: "bold" }
+                ? { fontFamily: "Poppins-Bold" }
                 : { color: "#7d7d7d" },
             ]}
           >
@@ -106,14 +106,14 @@ export default function TopBar(props) {
         <TouchableOpacity
           onPress={() => {
             setActiveItem("CBR");
-            leftValue.value = 280;
+            leftValue.value = 275;
           }}
         >
           <Text
             style={[
               topBarStyles.textStyles,
               activeItem === "CBR"
-                ? { fontWeight: "bold" }
+                ? { fontFamily: "Poppins-Bold" }
                 : { color: "#7d7d7d" },
             ]}
           >
@@ -123,14 +123,14 @@ export default function TopBar(props) {
         <TouchableOpacity
           onPress={() => {
             setActiveItem("MBR");
-            leftValue.value = 438;
+            leftValue.value = 442;
           }}
         >
           <Text
             style={[
               topBarStyles.textStyles,
               activeItem === "MBR"
-                ? { fontWeight: "bold" }
+                ? { fontFamily: "Poppins-Bold" }
                 : { color: "#7d7d7d" },
             ]}
           >
@@ -152,7 +152,8 @@ const topBarStyles = StyleSheet.create({
   textStyles: {
     paddingBottom: 15,
     fontSize: 15,
-    paddingHorizontal: 15,
+    paddingHorizontal: 12,
+    fontFamily: "Poppins-Regular",
   },
   horizontalScrollView: {
     padding: 5,

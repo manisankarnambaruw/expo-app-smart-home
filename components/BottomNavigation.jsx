@@ -4,7 +4,6 @@ import { Link, usePathname } from "expo-router";
 
 export default function BottomNavigation() {
   const pathname = usePathname();
-  console.log(pathname);
   return (
     <View style={layoutStyleSheet.bottomNavigationContainer}>
       <View style={layoutStyleSheet.iconsWrapper}>
